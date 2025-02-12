@@ -20,11 +20,11 @@ struct PieChart: View {
     var body: some View {
         Chart{
             ForEach (data) { d in
-                SectorMark(angle: .value("Hours",d .hours ),
+                SectorMark(angle: .value("Hours", d.hours ),
                            innerRadius: .ratio(0.5), angularInset: 2
                         )
                 . foregroundStyle ( by : .value("Day", d.day) )
-                .cornerRadius(20)
+                .cornerRadius(10)
             }
         }.padding()
     }
