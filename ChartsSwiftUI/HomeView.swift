@@ -11,15 +11,28 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack{
+                HStack {
+                    Text("Welcome")
+                        .foregroundStyle(.green)
+                    Text("to")
+                        .foregroundStyle(.black)
+                    Text("Charts")
+                        .foregroundStyle(.purple)
+                    Text("SwiftUI")
+                        .foregroundStyle(.pink)
+                        
+                }.font(.title)
+                    .bold()
+
                 NavigationLink {
                     BarChart()
                 } label: {
                     Text("BarChart")
-                        .font(.largeTitle)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.green)
                         .clipShape(.capsule)
                         .padding()
                 }
@@ -28,11 +41,11 @@ struct HomeView: View {
                     LineChart()
                 } label: {
                     Text("LineChart")
-                        .font(.largeTitle)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.red)
                         .clipShape(.capsule)
                         .padding()
                 }
@@ -40,11 +53,11 @@ struct HomeView: View {
                     PointChart()
                 } label: {
                     Text("PointChart")
-                        .font(.largeTitle)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.black)
                         .clipShape(.capsule)
                         .padding()
                 }
@@ -52,11 +65,24 @@ struct HomeView: View {
                     AreaChart()
                 } label: {
                     Text("AreaChart")
-                        .font(.largeTitle)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.teal)
+                        .clipShape(.capsule)
+                        .padding()
+                }
+                
+                NavigationLink {
+                    PieChart()
+                } label: {
+                    Text("PieChart")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                        .padding()
+                        .background(Color.indigo)
                         .clipShape(.capsule)
                         .padding()
                 }
